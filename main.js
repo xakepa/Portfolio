@@ -36,8 +36,6 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 
 scene.add(pointLight, ambientLight);
 
-
-
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
@@ -55,7 +53,7 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load("./images/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
 
 function animate() {
@@ -72,7 +70,7 @@ function animate() {
 
 animate();
 
-const myPhoto = new THREE.TextureLoader().load("./images/me.jpg");
+const myPhoto = new THREE.TextureLoader().load("me.jpg");
 
 const myself = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
@@ -81,8 +79,8 @@ const myself = new THREE.Mesh(
 
 scene.add(myself);
 
-const moonTexture = new THREE.TextureLoader().load("./images/moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("./images/normal.jpg");
+const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("normal.jpg");
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
